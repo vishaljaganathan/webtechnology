@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSCA 514: Web Technologies Lab Dashboard | Vishal J</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Top Navigation Bar -->
+        <header class="top-header glass">
+            <div class="header-brand">
+                <div class="brand-icon">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <div class="brand-info">
+                    <h1>Lab Exercises Dashboard</h1>
+                    <p>Pondicherry University &bull; MCA III Semester &bull; CSCA 514</p>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <a href="./portfolio/index.html" class="portfolio-link-btn" title="View Full Developer Portfolio">
+                    <i class="fas fa-user-circle"></i> Vishal's Portfolio
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Hero Panel -->
+        <section class="hero-panel glass">
+            <div class="hero-badge">
+                <i class="fas fa-check-double"></i> 10 of 10 Lab Exercises Completed
+            </div>
+            <h2>Internet & Web Technologies Laboratory</h2>
+            <p>
+                Centralized interactive hub providing full access to all curriculum practical exercises developed for <strong>CSCA 514</strong> at the Department of Computer Science, Pondicherry University. Built with modern web standards, database persistence, and RESTful APIs.
+            </p>
+
+            <!-- Stats Bar -->
+            <div class="stats-grid">
+                <div class="stat-card glass">
+                    <i class="fas fa-tasks stat-icon"></i>
+                    <div class="stat-num" id="statTotal">10</div>
+                    <div class="stat-label">Total Exercises</div>
+                </div>
+                <div class="stat-card glass">
+                    <i class="fas fa-database stat-icon"></i>
+                    <div class="stat-num">4</div>
+                    <div class="stat-label">Database & PHP Apps</div>
+                </div>
+                <div class="stat-card glass">
+                    <i class="fas fa-network-wired stat-icon"></i>
+                    <div class="stat-num">2</div>
+                    <div class="stat-label">AJAX & API Projects</div>
+                </div>
+                <div class="stat-card glass">
+                    <i class="fas fa-graduation-cap stat-icon"></i>
+                    <div class="stat-num" style="color: #34d399;">100%</div>
+                    <div class="stat-label">Syllabus Coverage</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Controls -->
+        <div class="controls-bar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="exerciseSearch" placeholder="Search exercise by title, number, or technology...">
+            </div>
+
+            <div class="filter-pills">
+                <button type="button" class="pill-btn active" data-category="all">All (10)</button>
+                <button type="button" class="pill-btn" data-category="static">Static Web</button>
+                <button type="button" class="pill-btn" data-category="javascript">JS & Logic</button>
+                <button type="button" class="pill-btn" data-category="database">Database & PHP</button>
+                <button type="button" class="pill-btn" data-category="api">APIs & AJAX</button>
+            </div>
+        </div>
+
+        <!-- 10 Lab Exercises Grid -->
+        <main class="exercises-grid" id="exercisesGrid">
+
+            <!-- Exercise 1 -->
+            <article class="exercise-card" data-category="static" data-search="1 resume webpage html static profile cv">
+                <div>
+                    <div class="card-top">
+                        <span class="ex-number">Exercise 01</span>
+                        <span class="category-tag"><i class="fas fa-file-alt"></i> Static Webpage</span>
+                    </div>
+                    <h3 class="card-title">1. Resume Webpage</h3>
+                    <p class="card-desc">
+                        Static professional resume webpage incorporating profile photograph, academic qualifications, work experience, technical skills, and key projects using HTML5.
+                    </p>
+                    <div class="card-tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="portfolio/lab-exercises/resume/index.html" class="btn-launch">
+                        <i class="fas fa-external-link-alt"></i> View Resume
+                    </a>
+                </div>
+            </article>
+
+            <!-- Exercise 2 -->
+            <article class="exercise-card" data-category="static" data-search="2 online shopping webpage product details static e-commerce petstore">
+                <div>
+                    <div class="card-top">
+                        <span class="ex-number">Exercise 02</span>
+                        <span class="category-tag"><i class="fas fa-shopping-cart"></i> Static E-Commerce</span>
+                    </div>
+                    <h3 class="card-title">2. Online Shopping Webpage</h3>
+                    <p class="card-desc">
+                        Static e-commerce storefront showcasing product details, pricing cards, category navigation, responsive grids, and interactive shopping cart counter.
+                    </p>
+                    <div class="card-tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">Responsive UI</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="portfolio/lab-exercises/shopping/index.html" class="btn-launch">
+                        <i class="fas fa-play"></i> Launch Exercise
+                    </a>
+                </div>
+            </article>
+
+            <!-- Exercise 3 -->
+            <article class="exercise-card" data-category="javascript" data-search="3 simple quiz 20 questions display user score timer multiple choice">
+                <div>
+                    <div class="card-top">
+                        <span class="ex-number">Exercise 03</span>
+                        <span class="category-tag"><i class="fas fa-question-circle"></i> Interactive Web</span>
+                    </div>
+                    <h3 class="card-title">3. Web Tech Quiz (20 Questions)</h3>
+                    <p class="card-desc">
+                        Interactive 20-question quiz testing HTML, CSS, and JS fundamentals with real-time score tracking, progress bar, option verification, and performance breakdown.
+                    </p>
+                    <div class="card-tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="portfolio/lab-exercises/quiz/index.html" class="btn-launch">
+                        <i class="fas fa-play"></i> Launch Exercise
+                    </a>
+                </div>
+            </article>
+
+            <!-- Exercise 4 -->
+            <article class="exercise-card" data-category="javascript" data-search="4 online calculator basic scientific functions user friendly math">
+                <div>
+                    <div class="card-top">
+                        <span class="ex-number">Exercise 04</span>
+                        <span class="category-tag"><i class="fas fa-calculator"></i> Scientific App</span>
+                    </div>
+                    <h3 class="card-title">4. Scientific Calculator</h3>
+                    <p class="card-desc">
+                        Visually appealing online calculator supporting arithmetic plus advanced scientific operations including trigonometric functions, logarithms, powers, and roots.
+                    </p>
+                    <div class="card-tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="portfolio/lab-exercises/calculator/index.html" class="btn-launch">
+                        <i class="fas fa-play"></i> Launch Exercise
+                    </a>
+                </div>
+            </article>
+
+            <!-- Exercise 5 -->
+            <article class="exercise-card" data-category="database" data-search="5 employee details form table phpmyadmin database mysql insert">
+                <div>
+                    <div class="card-top">
+                        <span class="ex-number">Exercise 05</span>
+                        <span class="category-tag"><i class="fas fa-database"></i> Database Form</span>
+                    </div>
+                    <h3 class="card-title">5. Employee Form & phpMyAdmin DB</h3>
+                    <p class="card-desc">
+                        Form design to collect and validate employee records, storing them in a live database table view with local persistence and complete phpMyAdmin SQL & PHP backend.
+                    </p>
+                    <div class="card-tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">phpMyAdmin</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="portfolio/lab-exercises/employee-form/index.html" class="btn-launch">
+                        <i class="fas fa-play"></i> Launch Exercise
+                    </a>
+                </div>
+            </article>
+
+            <!-- Exercise 6 -->
+            <article class="exercise-card" data-category="database" data-search="6 department webpage front-end back-end database home page login registration about us pondicherry university">
+                <div>
+                    <div class="card-top">
+                        <span class="ex-number">Exercise 06</span>
+                        <span class="category-tag"><i class="fas fa-university"></i> Dynamic Portal</span>
+                    </div>
+                    <h3 class="card-title">6. Dynamic Department Webpage</h3>
+                    <p class="card-desc">
+                        Four-view university department portal: Home page, About Us, Student Registration, and Authenticated Login with dynamic dashboard and phpMyAdmin backend.
+                    </p>
+                    <div class="card-tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">phpMyAdmin</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="portfolio/lab-exercises/department-webpage/index.html" class="btn-launch">
+                        <i class="fas fa-play"></i> Launch Exercise
+                    </a>
+                </div>
+            </article>
+
+            <!-- Exercise 7 -->
+            <article class="exercise-card" data-category="database" data-search="7 company webpage employee admin role authenticate view details registration login">
+                <div>
+                    <div class="card-top">
+                        <span class="ex-number">Exercise 07</span>
+                        <span class="category-tag"><i class="fas fa-user-shield"></i> Role-Based Auth</span>
+                    </div>
+                    <h3 class="card-title">7. Company Role-Based Webpage</h3>
+                    <p class="card-desc">
+                        Company portal with Home page, Registration, and Login. Condition: Employees view all Admin details; Admins view all Employee details.
+                    </p>
+                    <div class="card-tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">phpMyAdmin</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="portfolio/lab-exercises/company-webpage/index.html" class="btn-launch">
+                        <i class="fas fa-play"></i> Launch Exercise
+                    </a>
+                </div>
+            </article>
+
+            <!-- Exercise 8 -->
+            <article class="exercise-card" data-category="database" data-search="8 contact management application crud add view edit delete phpmyadmin contacts">
+                <div>
+                    <div class="card-top">
+                        <span class="ex-number">Exercise 08</span>
+                        <span class="category-tag"><i class="fas fa-address-book"></i> Full CRUD App</span>
+                    </div>
+                    <h3 class="card-title">8. Contact Management (CRUD)</h3>
+                    <p class="card-desc">
+                        Full CRUD application to add, view, search, edit, and delete contacts with category tags (Work, Personal, Family) and phpMyAdmin REST API backend.
+                    </p>
+                    <div class="card-tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">phpMyAdmin</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="portfolio/lab-exercises/contact-management/index.html" class="btn-launch">
+                        <i class="fas fa-play"></i> Launch Exercise
+                    </a>
+                </div>
+            </article>
+
+            <!-- Exercise 9 -->
+            <article class="exercise-card" data-category="api" data-search="9 ajax json fetch display data weather api temperature condition forecast">
+                <div>
+                    <div class="card-top">
+                        <span class="ex-number">Exercise 09</span>
+                        <span class="category-tag"><i class="fas fa-cloud-sun"></i> AJAX & JSON</span>
+                    </div>
+                    <h3 class="card-title">9. Weather App (AJAX & JSON)</h3>
+                    <p class="card-desc">
+                        Asynchronous weather dashboard fetching atmospheric data via Fetch API / AJAX, parsing JSON response with multi-provider fallback and live weather metrics.
+                    </p>
+                    <div class="card-tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">AJAX</span>
+                        <span class="tech-tag">JSON</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="portfolio/lab-exercises/weather-app/index.html" class="btn-launch">
+                        <i class="fas fa-play"></i> Launch Exercise
+                    </a>
+                </div>
+            </article>
+
+            <!-- Exercise 10 -->
+            <article class="exercise-card" data-category="api" data-search="10 jquery fetch display data books api load books $.ajax get titles authors">
+                <div>
+                    <div class="card-top">
+                        <span class="ex-number">Exercise 10</span>
+                        <span class="category-tag"><i class="fas fa-book"></i> jQuery $.ajax</span>
+                    </div>
+                    <h3 class="card-title">10. Book Finder API (jQuery)</h3>
+                    <p class="card-desc">
+                        Uses jQuery's $.ajax() GET request and a 'Load Books' trigger to asynchronously retrieve, parse JSON, and display book titles and authors from API.
+                    </p>
+                    <div class="card-tech-stack">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">jQuery 3.7</span>
+                        <span class="tech-tag">AJAX</span>
+                        <span class="tech-tag">JSON</span>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href="portfolio/lab-exercises/book-finder/index.html" class="btn-launch">
+                        <i class="fas fa-play"></i> Launch Exercise
+                    </a>
+                </div>
+            </article>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 <strong>Vishal J</strong> &bull; MCA III Semester &bull; Pondicherry University &bull; 
+            <a href="./portfolio/index.html">Visit Portfolio</a>
+        </p>
+    </footer>
+
+    <!-- Interactive Filter & Search Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('exerciseSearch');
+            const filterBtns = document.querySelectorAll('.pill-btn');
+            const cards = document.querySelectorAll('.exercise-card');
+            const statTotal = document.getElementById('statTotal');
+
+            let activeCategory = 'all';
+            let searchQuery = '';
+
+            function filterCards() {
+                let visibleCount = 0;
+
+                cards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    const searchData = card.getAttribute('data-search') || '';
+
+                    const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+                    const matchesSearch = !searchQuery || searchData.includes(searchQuery);
+
+                    if (matchesCategory && matchesSearch) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (statTotal) statTotal.textContent = visibleCount;
+            }
+
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    searchQuery = e.target.value.toLowerCase().trim();
+                    filterCards();
+                });
+            }
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeCategory = btn.getAttribute('data-category');
+                    filterCards();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
